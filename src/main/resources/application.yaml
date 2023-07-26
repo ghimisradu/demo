@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: test
+  rabbitmq:
+    username: root
+    password: root  
+server:
+  port: 8880
+  shutdown: graceful
+  compression:
+    enabled: true
+    mime-types:
+    - application/json
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: development
+
+server:
+  address: 127.0.0.1
